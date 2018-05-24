@@ -8,7 +8,7 @@ do
                 cd ${year}/arctxt
                 echo "doing list: ${list} for year: ${year}"
                 rename -v -- 's/(\d+)/sprintf("%03d",$1)/e' *
-                ${HOME}/group_test.py ${list}@lists.native-instruments.de
+                ${HOME}/gg_migrate_mail.py ${list}@lists.native-instruments.de
                 cd ../..
         done
 done
