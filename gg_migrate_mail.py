@@ -36,7 +36,7 @@ if int(total) <= 1:
     "Usage:\n"
      + str(sys.argv[0]) + " <list address>\n"
      + "e.g.\n"
-     + str(sys.argv[0]) + " mylist@lists.native-instruments.de\n")
+     + str(sys.argv[0]) + " mylist@lists.example.com\n")
   sys.exit(1)
 
 
@@ -80,7 +80,7 @@ def main():
 
     #groupId = raw_input(
     #    'Enter the email address of a Google Group in your domain: ')
-    #groupId = "my-skopp-group@gdev.native-instruments.de"
+    #groupId = "my-skopp-group@gdev.example.com"
     groupId = str(sys.argv[1])
 
 

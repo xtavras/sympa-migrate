@@ -5,6 +5,6 @@ do
         do
  
                 echo "adding member to: $list"
-                /home/ni-admin/bin/gam/gam update group ${list}@lists-test.native-instruments.de add member user $member
+                /home/ni-admin/bin/gam/gam update group ${list}@lists-test.example.com add member user $member
         done
 done

@@ -1,3 +1,13 @@
+Indroduction
+------------
+
+This is small how-to for migration Sympa's maillings lists to Google Groups.
+
+- It was used for Sympa 6.1, it may be different for other versions or your einveronment
+- It was fast one-way job, so expect many bash oneliners and hacks, I'm sure with more time and dedication you can wrap it in one, polished python script. 
+- It may not explain everything, but you will get the idea, good luck!
+
+
 
 Actual steps
 ------------
@@ -103,14 +113,14 @@ for list in \`cat ../lists\_to\_migrate.txt\`; do rsync -avPh root@lists.example
 for migrating to Google, we should use **gg_migrate_mail.py** script, it's modfied Julian Dunn's script, with added support for recent API changes + inserting random "message id" for mails that don't have it. Stranegly enough I had some mails without it in mail body and they will be succesfully imported to Google Groups but will be nowhere to find in WebUI, very nasty.
 
 the usage is simple, go "$LIST/$year-month/arctxt" and run script as
-
+```sh
 gg_migrate_mail.py <LIST MAIL>
-
+```
 e.g. for "apple" mailing lists
-
+```sh
 cd /home/skopp/work/2gmail/sympa/archives/apple@lists.example.com/2011-11/arctxt
 gg_migrate_mail.py apple@lists.example.com
-
+```
 To automate these steps this simple bash script can be used, you should run it within "/home/skopp/work/2gmail/sympa/archives/" directory ("rename" tool is used to rename mails from "1" --> "001" so we have better sorting)
 
 **migrate_mails.sh**

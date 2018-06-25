@@ -4,6 +4,6 @@ do
         for owner in `cat $list`
         do
                 echo "adding to: $list"
-                /home/ni-admin/bin/gam/gam update group ${list}@lists-test.native-instruments.de add owner user $owner
+                /home/ni-admin/bin/gam/gam update group ${list}@lists-test.example.com add owner user $owner
         done
 done
